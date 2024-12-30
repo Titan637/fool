@@ -110,7 +110,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def start_attack(target_ip, port, duration, user_id, original_message, context):
     global active_attack
-    command = ['./xnx', target_ip, str(port), str(duration) ]  # Add 'sudo' before the binary
+    command = ['./xxxx', target_ip, str(port), str(duration) ]  # Add 'sudo' before the binary
 
     try:
         process = await asyncio.create_subprocess_exec(*command)
