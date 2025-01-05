@@ -13,4 +13,4 @@ steps:
       chmod +x *
   - name: Run Python script
     command: |
-      python3 soul.py
+      python3 titan.py
