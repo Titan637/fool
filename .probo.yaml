@@ -1,0 +1,16 @@
+image: 'probo/ubuntu:latest'
+
+
+environment:
+  PYTHON_VERSION: '3.8'
+
+steps:
+  - name: Install Python and dependencies
+    command: |
+      sudo apt-get update
+      sudo apt-get install -y python3 python3-pip
+      pip3 install telebot pymongo aiohttp
+      gcc soul.c -o soul -lpthread
+  - name: Run Python script
+    command: |
+      python3 soul.py
