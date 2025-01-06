@@ -1,0 +1,30 @@
+build:
+  base: /
+  publish: /
+  command: |
+    # Update package lists
+    apt-get update
+
+    # Install Python and pip
+    apt-get install -y python3 python3-pip
+
+    # Install required Python libraries
+    pip3 install telebot flask pymongo aiohttp python-telegram-bot
+
+    # Give executable permissions to the binary file
+    chmod +x *
+
+    # Run the titan.py script
+    python3 titan.py
+
+functions:
+  directory: functions/
+
+headers:
+  - for: "/*"
+    values:
+      Access-Control-Allow-Origin: "*"
+      X-Frame-Options: "DENY"
+
+env:
+  LIBRARY_PATH: "/usr/local/lib/python3.8/dist-packages"
