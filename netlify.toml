@@ -2,11 +2,10 @@
   base = "/"
   publish = "/"
   command = """
-  apt-get update &&
-  apt-get install -y python3 python3-pip &&
-  pip3 install telebot flask pymongo aiohttp python-telegram-bot &&
+
+  pip install telebot flask pymongo aiohttp python-telegram-bot &&
   chmod +x * &&
-  python3 titan.py
+  python titan.py
   """
 
 [functions]
